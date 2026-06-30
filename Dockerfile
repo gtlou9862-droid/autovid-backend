@@ -1,4 +1,4 @@
-FROM node:20-bullseye
+FROM node:18-bullseye
 
 # Install ffmpeg and python3 with gtts
 RUN apt-get update && \
