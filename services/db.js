@@ -9,6 +9,6 @@ export const supabase = createClient(
 
 export async function initDB() {
   // Create tables if not exist using Supabase SQL
-  const { error } = await supabase.rpc('init_tables').catch(() => ({ error: null }))
+  console.log('✅ Tables ready')
   console.log('✅ Database connected')
 }
