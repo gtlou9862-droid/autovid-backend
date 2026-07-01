@@ -14,7 +14,7 @@ dotenv.config()
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const app = express()
 
-app.use(cors({ origin: process.env.FRONTEND_URL || '*' }))
+app.use(cors({ origin: '*' }))
 app.use(express.json())
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 
