@@ -20,7 +20,7 @@ if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true })
 export async function generateScript(topic, style, duration) {
   const wordCount = Math.floor(duration * 2.5)
   const res = await axios.post('https://api.groq.com/openai/v1/chat/completions', {
-    model: 'llama3-70b-8192',
+    model: 'llama-3.3-70b-versatile',
     max_tokens: 2000,
     messages: [{
       role: 'user',
